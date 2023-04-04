@@ -304,7 +304,7 @@ void gui::Render() noexcept
 
 	if (ImGui::Button("join our discord server", ImVec2{ 170, 50 }))
 	{
-		ShellExecute(NULL, "open", "https://discord.gg/dvjjZWrExC", 0, 0, SW_SHOWNORMAL);
+		ShellExecute(NULL, "open", "https://discord.gg/SKdMBZCR9F", 0, 0, SW_SHOWNORMAL);
 	}
 
 	ImGui::End();
