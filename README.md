@@ -10,6 +10,7 @@ External ImGui cheat menu with bhop, esp, and radar hacks.
 
 # 🛰 Discord
 Since I plan to work on this project for a while, I created a shitty discord server where you download the latest releases and report bugs.
+
 Discord Server: https://discord.gg/dvjjZWrExC
 
 # 🗿 Disclaimer
