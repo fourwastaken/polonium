@@ -18,7 +18,7 @@ int __stdcall wWinMain(
 	std::thread(hacks::VisualsThread, mem).detach();
 
 	// create gui
-	gui::CreateHWindow("Polonium Cheat v0.1");
+	gui::CreateHWindow("Polonium Cheat v0.2");
 	gui::CreateDevice();
 	gui::CreateImGui();
 
