@@ -298,6 +298,13 @@ void gui::Render() noexcept
 			ImGui::Checkbox("enable bhop", &globals::bhop);
 			ImGui::EndTabItem();
 		}
+
+		if (ImGui::BeginTabItem("aimbot"))
+		{
+			ImGui::Checkbox("enable aimbot", &globals::aimbot);
+			ImGui::SliderFloat("aimbot fov", &globals::bestFov, 0, 100);
+			ImGui::EndTabItem();
+		}
 		
 		ImGui::EndTabBar();
 	}

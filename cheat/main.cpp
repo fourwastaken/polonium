@@ -13,6 +13,7 @@ int __stdcall wWinMain(
 	Memory mem{ "csgo.exe" };
 
 	globals::clientAddress = mem.GetModuleAddress("client.dll");
+	globals::engineAddress = mem.GetModuleAddress("engine.dll");
 
 	std::thread(hacks::VisualsThread, mem).detach();
 
