@@ -1,5 +1,5 @@
 # 👾 About
-External ImGui cheat menu with bhop, esp, and radar hacks.
+External ImGui cheat menu with a handful of different features.
 
 # ☂️ Usage
 1. Clone this repository
