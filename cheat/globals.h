@@ -1,7 +1,6 @@
 #pragma once
 #include <cstdint>
 #include <cstddef>
-#include "vector.h"
 
 namespace globals
 {
@@ -16,7 +15,10 @@ namespace globals
 	inline bool bhop = false;
 
 	inline bool aimbot = false;
-	inline auto bestFov = 0.f;
+	inline auto bestFov = 5.f;
+	inline auto smoothing = 3.f;
+
+	inline bool norecoil = false;
 }
 
 namespace offsets
@@ -40,4 +42,5 @@ namespace offsets
 	constexpr ::std::ptrdiff_t m_bSpottedByMask = 0x980;
 	constexpr ::std::ptrdiff_t m_dwBoneMatrix = 0x26A8;
 	constexpr ::std::ptrdiff_t m_bDormant = 0xED;
+	constexpr ::std::ptrdiff_t m_iShotsFired = 0x103E0;
 }

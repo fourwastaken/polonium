@@ -218,9 +218,7 @@ void gui::BeginRender() noexcept
 	const auto black = ImVec4(0.f, 0.f, 0.f, 1.f);
 	const auto gray = ImVec4(1.f, 1.f, 1.f, 0.3);
 	ImGui::PushStyleColor(ImGuiCol_WindowBg, black);
-	ImGui::PushStyleColor(ImGuiCol_Tab, black);
-	ImGui::PushStyleColor(ImGuiCol_TabHovered, gray);
-	ImGui::PushStyleColor(ImGuiCol_TabActive, black);
+	ImGui::PushStyleColor(ImGuiCol_Tab, gray);
 }
 
 void gui::EndRender() noexcept
@@ -252,7 +250,7 @@ void gui::Render() noexcept
 	ImGui::SetNextWindowPos({ 0, 0 });
 	ImGui::SetNextWindowSize({ WIDTH, HEIGHT });
 	ImGui::Begin(
-		"Polonium Cheat v0.2",
+		"Polonium Cheat v0.3",
 		&isRunning,
 		ImGuiWindowFlags_NoResize |
 		ImGuiWindowFlags_NoSavedSettings |
@@ -263,20 +261,20 @@ void gui::Render() noexcept
 
 	if (ImGui::BeginTabBar("tabs"));
 	{
-		if (ImGui::BeginTabItem("introduction"))
+		if (ImGui::BeginTabItem("intro"))
 		{
 			ImGui::Spacing();
 			ImGui::Spacing();
-			ImGui::Text("welcome to polonium cheat.");
+			ImGui::Text("Polonium v0.3");
 			ImGui::Spacing();
 			ImGui::Spacing();
-			ImGui::Text("all your favorite csgo hacks, packed into a single executable.");
+			ImGui::Text("External ImGui cheat menu that has some features.");
 			ImGui::Spacing();
 			ImGui::Spacing();
-			ImGui::Text("this project was curated by borpa#4322 on discord!");
+			ImGui::Text("This project was created by borpa#4322 on Discord.");
 			ImGui::Spacing();
 			ImGui::Spacing();
-			ImGui::Text("more features to come soon.");
+			ImGui::Text("Join our Discord server for support!");
 			ImGui::EndTabItem();
 		}
 
@@ -303,6 +301,15 @@ void gui::Render() noexcept
 		{
 			ImGui::Checkbox("enable aimbot", &globals::aimbot);
 			ImGui::SliderFloat("aimbot fov", &globals::bestFov, 0, 100);
+			ImGui::SliderFloat("smoothing", &globals::smoothing, 0, 10);
+			ImGui::TextColored(ImVec4(1.f, 1.f, 0.f, 1.f), "More smoothing = less blatant");
+			ImGui::EndTabItem();
+		}
+
+		if (ImGui::BeginTabItem("recoil"))
+		{
+			ImGui::Checkbox("enable anti recoil", &globals::norecoil);
+			ImGui::TextColored(ImVec4(1.f, 1.f, 0.f, 1.f), "Disables recoil, THIS DOES NOT REMOVE BULLET SPRAY");
 			ImGui::EndTabItem();
 		}
 		

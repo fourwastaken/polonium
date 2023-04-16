@@ -15,10 +15,14 @@ int __stdcall wWinMain(
 	globals::clientAddress = mem.GetModuleAddress("client.dll");
 	globals::engineAddress = mem.GetModuleAddress("engine.dll");
 
-	std::thread(hacks::VisualsThread, mem).detach();
+	std::thread(hacks::ESPThread, mem).detach();
+	std::thread(hacks::RadarThread, mem).detach();
+	std::thread(hacks::BHopThread, mem).detach();
+	std::thread(hacks::AimbotThread, mem).detach();
+	std::thread(hacks::RecoilThread, mem).detach();
 
 	// create gui
-	gui::CreateHWindow("Polonium Cheat v0.2");
+	gui::CreateHWindow("Polonium Cheat v0.3");
 	gui::CreateDevice();
 	gui::CreateImGui();
 

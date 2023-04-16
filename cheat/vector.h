@@ -2,6 +2,11 @@
 #include <numbers>
 #include <cmath>
 
+struct Vector2
+{
+	float x = { }, y = { };
+};
+
 struct Vector3
 {
 	// constructor
